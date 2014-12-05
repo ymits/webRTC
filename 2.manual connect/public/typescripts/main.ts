@@ -9,9 +9,6 @@ require.config({
         },
         'angular-route': {
             deps: ['angular']
-        },
-        adapter: {
-            exports: 'adapter'
         }
     }
 });
