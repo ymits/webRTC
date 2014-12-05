@@ -13,6 +13,15 @@
     },
     "requirejs/require.d.ts": {
       "commit": "bd0833a22eb1c4e4a963068d4e2550fe866399d1"
+    },
+    "angularjs/angular-route.d.ts": {
+      "commit": "bd0833a22eb1c4e4a963068d4e2550fe866399d1"
+    },
+    "webrtc/MediaStream.d.ts": {
+      "commit": "7145db5ef468d28a9926c8376f1f563116fe9a25"
+    },
+    "webrtc/RTCPeerConnection.d.ts": {
+      "commit": "7145db5ef468d28a9926c8376f1f563116fe9a25"
     }
   }
 }

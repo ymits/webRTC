@@ -12,29 +12,30 @@ module.exports = function(grunt) {
     },
     watch : {
       publicFiles : {
-        files : 'public/**/*',
+        files : ['public/**/*.css', 'public/**/*.js', 'public/**/*.html'],
         options : {
           livereload : true
         }
       },
       scripts : {
-        files : 'typescripts/**/*.ts',
+        files : 'public/typescripts/**/*.ts',
         tasks: ['typescript']
       }
     },
     typescript: {
       base: {
-        src: ['typescripts/**/*.ts'],
+        src: ['public/typescripts/**/*.ts'],
         dest: 'public/javascripts',
         options: {
           module: 'amd', //or commonjs
           target: 'es5', //or es3
-          basePath: 'typescripts',
+          basePath: 'public/typescripts',
           sourceMap: true,
-          references: ['typescripts/typings/tsd.d.ts']
+          references: ['public/typescripts/typings/tsd.d.ts']
         }
       }
-    }
+    },
+    clean: ["public/javascripts"]
   });
   
   var pkg = grunt.file.readJSON('package.json');

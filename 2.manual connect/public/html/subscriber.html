@@ -1,0 +1,32 @@
+<h2>動画受信側</h2>
+<div>
+    <video autoplay style="width: 240px; height: 180px; border: 1px solid black;"
+           ng-src="{{cameraUrl | trusted}}"></video>
+    <div>
+        <button ng-click="onClickConnectBtn()">connect</button>
+    </div>
+</div>
+<div>
+    <p>
+        SDP(Offer) send:<br/>
+        <textarea rows="5" cols="100" disabled="1">{{offerSDP}}</textarea>
+    </p>
+
+    <p>
+        SDP(Answer) receive:<br/>
+        <textarea rows="5" cols="100" ng-model="answerSDP"></textarea><br/>
+        <button type="button" ng-click="onClickSDPReceivedBtn();">SDP(Answer)受信</button>
+    </p>
+</div>
+<div>
+    <p>
+        ICE Candidate:<br/>
+        <textarea rows="5" cols="100" disabled="1">{{iceCandidates}}</textarea>
+    </p>
+
+    <p>
+        ICE Candidates to receive:<br/>
+        <textarea rows="5" cols="100" ng-model="remoteIceCandidates"></textarea><br/>
+        <button type="button" ng-click="onICEReceivedBtn();">ICE受信</button>
+    </p>
+</div>
