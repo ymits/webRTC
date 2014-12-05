@@ -57,11 +57,11 @@ var PublisherController = ($scope:PublisherScope, $window:ng.IWindowService):voi
     /**
      * SDP(Offer)受信ボタン押下時
      */
-    //
-    // before
-    //
-    //$scope.onClickSDPReceivedBtn = ():void => {
-    socket.on('offer', (sdpOffer:any) =>{
+        //
+        // before
+        //
+        //$scope.onClickSDPReceivedBtn = ():void => {
+    socket.on('offer', (sdpOffer:any) => {
         console.log('onRecieved Offer SPD');
 
         //var sdpOffer = JSON.parse($scope.offerSDP);
@@ -131,7 +131,7 @@ var PublisherController = ($scope:PublisherScope, $window:ng.IWindowService):voi
     /**
      * ICE受信ボタン押下時
      */
-    //$scope.onICEReceivedBtn = ():void => {
+        //$scope.onICEReceivedBtn = ():void => {
     socket.on('iceCandidate', (candidate:any)=> {
         console.log('onRecieved ICE Candidate');
         //var arr:string[] = $scope.remoteIceCandidates.split(iceSeparator);

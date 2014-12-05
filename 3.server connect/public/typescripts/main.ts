@@ -11,7 +11,7 @@ require.config({
         'angular-route': {
             deps: ['angular']
         },
-        'socket.io':{
+        'socket.io': {
             exports: 'io'
         }
     }

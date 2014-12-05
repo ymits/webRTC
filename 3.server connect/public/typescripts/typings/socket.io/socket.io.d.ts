@@ -1,12 +1,12 @@
 declare module 'socket.io' {
-    var client: SocketIO;
+    var client:SocketIO;
     export = client;
 }
 
 interface SocketIO {
-    connect(url: string): Socket;
+    connect(url:string): Socket;
 }
 interface Socket {
-    on(event: string, callback: (data: any) => void );
-    emit(event: string, data: any);
+    on(event:string, callback:(data:any) => void);
+    emit(event:string, data:any);
 }
